@@ -1,0 +1,29 @@
+{
+    "name": "Node.js & React",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:latest",
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "18"
+      }
+    },
+    "postCreateCommand": "npm install",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash"
+        },
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode"
+        ]
+      }
+    },
+    "portsAttributes": {
+      "3000": {
+        "label": "React Dev Server",
+        "onAutoForward": "notify"
+      }
+    },
+    "forwardPorts": [3000]
+  }
+  
